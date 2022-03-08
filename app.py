@@ -23,6 +23,11 @@ def documents():
 def announcements():
     return render_template('announcements.html')
 
+@app.route("/directory")
+def directory():
+    return render_template('directory.html')
+
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
