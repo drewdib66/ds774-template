@@ -23,6 +23,10 @@ def documents():
 def announcements():
     return render_template('announcements.html')
 
+@app.route("/events")
+def events():
+    return render_template('events.html')
+
 @app.route("/directory")
 def directory():
     return render_template('directory.html')
