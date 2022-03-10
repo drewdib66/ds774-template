@@ -54,6 +54,12 @@ def admin():
 
     # If method was POST, a form was submitted
     if request.method == 'POST':
+        if request.form.get('issue') == 'post':
+            fname = request.form['fname']
+            lname = request.form['lname']
+            eaddress = request.form['eaddress']
+            message = request.form['message']
+            result = contact_form(fname, lname, eaddress, message)
 
         # If the form was Login, perform log in steps
         if request.form.get('admin') == 'Login':
